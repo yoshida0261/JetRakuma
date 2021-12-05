@@ -39,21 +39,3 @@ fun DefaultPreview() {
 }
 
 
-
-@Composable
-fun JetRakumaBottomNavigation () {
-    var selectedItem by remember { mutableStateOf(0) }
-    val items = listOf(Item.Home, Item.Search, Item.Notifications, Item.Person)
-
-    BottomNavigation {
-        items.forEachIndexed { index, item ->
-            BottomNavigationItem(
-                icon = { Icon(item.icon, contentDescription = null) },
-                label = { Text(item.dist) },
-                alwaysShowLabel = false,
-                selected = selectedItem == index,
-                onClick = { selectedItem = index }
-            )
-        }
-    }
-}
