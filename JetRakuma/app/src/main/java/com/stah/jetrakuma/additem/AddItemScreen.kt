@@ -1,4 +1,9 @@
 package com.stah.jetrakuma.additem
 
-class AddItemScreen {
+import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
+
+@Composable
+fun AddItemScreen(){
+    Text(text = "AddItem")
 }

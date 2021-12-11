@@ -4,6 +4,7 @@ import android.graphics.drawable.BitmapDrawable
 
 import android.provider.ContactsContract
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.*
@@ -24,26 +25,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.content.res.ResourcesCompat
+import com.stah.jetrakuma.R
 
-@Preview
-@Composable
-fun JetRakumaBottomNavigation () {
-    var selectedItem by remember { mutableStateOf(0) }
-    val items = listOf(Item.Home, Item.Search, Item.Notifications, Item.Person)
 
-    BottomNavigation {
-        items.forEachIndexed { index, item ->
-            BottomNavigationItem(
-                modifier = Modifier.background(Color.White),
-                icon = { Icon(item.icon, contentDescription = null, tint = Color.Gray) },
-                label = { Text(item.dist, color = Color.Gray) },
-                alwaysShowLabel = false,
-                selected = selectedItem == index,
-                onClick = { selectedItem = index }
-            )
-        }
-    }
-}
 
 @ExperimentalComposeUiApi
 @Composable
@@ -88,20 +72,15 @@ fun PhotoGrid(modifier: Modifier) {
         content = {
             items(list.size) { index ->
                 Card(
-                    backgroundColor = Color.Red,
+                    backgroundColor = Color.White,
                     modifier = Modifier
                         .padding(4.dp)
+                        .fillMaxHeight()
                         .fillMaxWidth(),
                     elevation = 8.dp,
                 ) {
-                    Text(
-                        text = list[index],
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 30.sp,
-                        color = Color(0xFFFFFFFF),
-                        textAlign = TextAlign.Center,
-                        modifier = Modifier.padding(16.dp)
-                    )
+                    Image( painter = painterResource(id = R.drawable.ic_launcher_background), contentDescription = "")
+
                 }
             }
         }
