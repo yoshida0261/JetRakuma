@@ -1,4 +1,4 @@
-package com.stah.jetrakuma.components
+package com.stah.jetrakuma.ui.components
 
 import androidx.compose.material.*
 import androidx.compose.material.TabRowDefaults.tabIndicatorOffset
@@ -22,5 +22,5 @@ fun TabRow(
     },
     tabs: @Composable () -> Unit
 ) {
-    
+
 }

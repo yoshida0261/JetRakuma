@@ -1,4 +1,4 @@
-package com.stah.jetrakuma.components
+package com.stah.jetrakuma.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.material.BottomNavigation
