@@ -7,6 +7,7 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Money
 import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -50,7 +51,8 @@ fun Header() {
 fun MypageMenu(){
 
 
-        Icon(Icons.Filled.ShoppingCart, null, )
+    Icon(Icons.Filled.Money, null, )
+    Icon(Icons.Filled.ShoppingCart, null, )
 
 
 }

@@ -16,7 +16,7 @@ enum class JetRakumaScreen(
     Search(
         icon = Icons.Filled.Search
     ),
-    Notification(
+    Notice(
         icon = Icons.Filled.Notifications
     ),
     MyPage(
@@ -28,7 +28,7 @@ enum class JetRakumaScreen(
             when (route?.substringBefore("/")) {
                 Home.name -> Home
                 Search.name -> Search
-                Notification.name -> Notification
+                Notice.name -> Notice
                 MyPage.name -> MyPage
                 else -> Home
             }
