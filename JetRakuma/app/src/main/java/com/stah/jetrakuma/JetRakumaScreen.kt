@@ -19,7 +19,7 @@ enum class JetRakumaScreen(
     Notification(
         icon = Icons.Filled.Notifications
     ),
-    Person(
+    MyPage(
         icon = Icons.Filled.Person
     );
 
@@ -29,7 +29,7 @@ enum class JetRakumaScreen(
                 Home.name -> Home
                 Search.name -> Search
                 Notification.name -> Notification
-                Person.name -> Person
+                MyPage.name -> MyPage
                 else -> Home
             }
     }

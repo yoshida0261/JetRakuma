@@ -34,6 +34,15 @@ fun HomeScreen(
 
 @ExperimentalComposeUiApi
 @Composable
+fun HomeBody(){
+    Column {
+            HomeSearchInput()
+          PhotoGrid(modifier = Modifier.weight(1f))
+    }
+}
+
+@ExperimentalComposeUiApi
+@Composable
 fun HomeSearchInput() {
     Row() {
         Box(
