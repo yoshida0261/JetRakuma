@@ -10,16 +10,26 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.stah.jetrakuma.JetRakumaScreen
 import com.stah.jetrakuma.ui.components.JetRakumaBottomNavigation
 
 @ExperimentalComposeUiApi
 @Composable
-fun HomeScreen() {
-    Column {
-        HomeSearchInput()
-        PhotoGrid(modifier = Modifier.weight(1f))
-        JetRakumaBottomNavigation()
-    }
+fun HomeScreen(
+    allScreens: List<JetRakumaScreen>,
+    onTabSelected: (JetRakumaScreen) -> Unit,
+    currentScreen: JetRakumaScreen
+) {
+        //Column {
+            //    HomeSearchInput()
+            //  PhotoGrid(modifier = Modifier.weight(1f))
+            JetRakumaBottomNavigation(
+                allScreen = allScreens,
+                onTabSelected = onTabSelected,
+                currentScreen = currentScreen
+            )
+      //  }
+
 }
 
 @ExperimentalComposeUiApi

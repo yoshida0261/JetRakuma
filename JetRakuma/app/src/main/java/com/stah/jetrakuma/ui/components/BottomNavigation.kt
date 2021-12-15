@@ -9,23 +9,26 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import com.stah.jetrakuma.JetRakumaScreen
 import com.stah.jetrakuma.home.Item
 
-@Preview
 @Composable
-fun JetRakumaBottomNavigation () {
-    var selectedItem by remember { mutableStateOf(0) }
-    val items = listOf(Item.Home, Item.Search, Item.Notifications, Item.Person)
+fun JetRakumaBottomNavigation (onTabSelected: (JetRakumaScreen) -> Unit,
+                               allScreen: List<JetRakumaScreen>,
+                               currentScreen: JetRakumaScreen
+                               ) {
+  //  var selectedItem by remember { mutableStateOf(0) }
+    //val items = listOf(Item.Home, Item.Search, Item.Notifications, Item.Person)
 
     BottomNavigation {
-        items.forEachIndexed { index, item ->
+        allScreen.forEach { screen->
             BottomNavigationItem(
                 modifier = Modifier.background(Color.White),
-                icon = { Icon(item.icon, contentDescription = null, tint = Color.Gray) },
-                label = { Text(item.dist, color = Color.Gray) },
+                icon = { Icon(screen.icon, contentDescription = null,  tint = Color.Gray) },
+                label = { Text(screen.name, color = Color.Gray) },
                 alwaysShowLabel = false,
-                selected = selectedItem == index,
-                onClick = { selectedItem = index }
+                selected = currentScreen == screen,
+                onClick = {onTabSelected(screen)}
             )
         }
     }
