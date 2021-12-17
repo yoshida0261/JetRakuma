@@ -3,6 +3,7 @@ package com.stah.jetrakuma.home
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -12,11 +13,15 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.google.accompanist.pager.ExperimentalPagerApi
 import com.stah.jetrakuma.JetRakumaScreen
 import com.stah.jetrakuma.mypage.MyPageScreen
+import com.stah.jetrakuma.notification.NotificationScreen
 import com.stah.jetrakuma.ui.theme.JetRakumaTheme
 
 class HomeActivity : ComponentActivity() {
+    @ExperimentalMaterialApi
+    @ExperimentalPagerApi
     @ExperimentalComposeUiApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +32,8 @@ class HomeActivity : ComponentActivity() {
 }
 
 
+@ExperimentalMaterialApi
+@ExperimentalPagerApi
 @ExperimentalComposeUiApi
 @Composable
 fun JetRakumaApp(){
@@ -59,7 +66,7 @@ fun JetRakumaApp(){
                     Text("search")
                 }
                 composable(JetRakumaScreen.Notice.name) {
-                    Text("notification")
+                    NotificationScreen()
                 }
                 composable(JetRakumaScreen.MyPage.name) {
                     MyPageScreen()
