@@ -1,10 +1,7 @@
 package com.stah.jetrakuma
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Notifications
-import androidx.compose.material.icons.filled.Person
-import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.*
 import androidx.compose.ui.graphics.vector.ImageVector
 
 enum class JetRakumaScreen(
@@ -16,8 +13,8 @@ enum class JetRakumaScreen(
     Search(
         icon = Icons.Filled.Search
     ),
-    Notice(
-        icon = Icons.Filled.Notifications
+    Add(
+        icon = Icons.Filled.PhotoCamera
     ),
     MyPage(
         icon = Icons.Filled.Person
@@ -28,7 +25,7 @@ enum class JetRakumaScreen(
             when (route?.substringBefore("/")) {
                 Home.name -> Home
                 Search.name -> Search
-                Notice.name -> Notice
+                Add.name -> Add
                 MyPage.name -> MyPage
                 else -> Home
             }

@@ -71,7 +71,7 @@ fun JetRakumaApp(){
                 composable(JetRakumaScreen.Search.name) {
                     SearchScreen()
                 }
-                composable(JetRakumaScreen.Notice.name) {
+                composable(JetRakumaScreen.Add.name) {
                     NotificationScreen()
                 }
                 composable(JetRakumaScreen.MyPage.name) {

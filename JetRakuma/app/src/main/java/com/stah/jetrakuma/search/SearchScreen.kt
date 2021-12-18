@@ -17,8 +17,8 @@ import com.stah.jetrakuma.ui.components.TopBarInput
 fun SearchScreen() {
     Scaffold(topBar = { TopBarInput() }) {
         Column {
-            Text("人気のカテゴリ")
-            CategoryItems(modifier = Modifier.weight(1f).padding(16.dp))
+            Text("人気のカテゴリ", modifier = Modifier.padding(start = 32.dp, top = 16.dp))
+            CategoryItems(modifier = Modifier.weight(1f).padding(start = 16.dp, end = 16.dp))
         }
     }
 }

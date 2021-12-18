@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.GridCells
 import androidx.compose.foundation.lazy.LazyVerticalGrid
 import androidx.compose.material.Card
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -42,8 +43,8 @@ fun CategoryItems(modifier: Modifier){
                         .fillMaxWidth(),
                     elevation = 8.dp,
                 ) {
-                    Image( painter = painterResource(id = R.drawable.ic_launcher_background), contentDescription = "")
-
+                    Image( painter = painterResource(id = R.drawable.ic_launcher_background), contentDescription = "Test")
+                    Text("Test")
                 }
             }
         }
