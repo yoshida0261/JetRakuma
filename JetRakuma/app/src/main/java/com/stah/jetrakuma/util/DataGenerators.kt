@@ -1,4 +1,14 @@
 package com.stah.jetrakuma.util
 
-class DataGenerators {
+fun dummyNotificationData() {
+
+}
+
+fun dummyLikeData() {
+
+}
+
+
+fun dummyCategoryData() {
+
 }
