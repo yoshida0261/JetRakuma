@@ -3,6 +3,7 @@ package com.stah.jetrakuma.home
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
@@ -17,9 +18,11 @@ import com.google.accompanist.pager.ExperimentalPagerApi
 import com.stah.jetrakuma.JetRakumaScreen
 import com.stah.jetrakuma.mypage.MyPageScreen
 import com.stah.jetrakuma.notification.NotificationScreen
+import com.stah.jetrakuma.search.SearchScreen
 import com.stah.jetrakuma.ui.theme.JetRakumaTheme
 
 class HomeActivity : ComponentActivity() {
+    @ExperimentalFoundationApi
     @ExperimentalMaterialApi
     @ExperimentalPagerApi
     @ExperimentalComposeUiApi
@@ -32,6 +35,7 @@ class HomeActivity : ComponentActivity() {
 }
 
 
+@ExperimentalFoundationApi
 @ExperimentalMaterialApi
 @ExperimentalPagerApi
 @ExperimentalComposeUiApi
@@ -63,7 +67,7 @@ fun JetRakumaApp(){
                     HomeBody()
                 }
                 composable(JetRakumaScreen.Search.name) {
-                    Text("search")
+                    SearchScreen()
                 }
                 composable(JetRakumaScreen.Notice.name) {
                     NotificationScreen()
