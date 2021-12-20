@@ -6,7 +6,6 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Scaffold
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.tooling.preview.Preview
@@ -15,7 +14,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.google.accompanist.pager.ExperimentalPagerApi
-import com.stah.jetrakuma.JetRakumaScreen
+import com.stah.jetrakuma.ui.nav.BottomNavigationIcon
 import com.stah.jetrakuma.home.HomeBody
 import com.stah.jetrakuma.home.HomeScreen
 import com.stah.jetrakuma.mypage.MyPageScreen
@@ -44,10 +43,10 @@ class JetRakumaActivity : ComponentActivity() {
 @Composable
 fun JetRakumaApp(){
     JetRakumaTheme {
-        val allScreens = JetRakumaScreen.values().toList()
+        val allScreens = BottomNavigationIcon.values().toList()
         val navController = rememberNavController()
         val backstackEntry = navController.currentBackStackEntryAsState()
-        val currentScreen = JetRakumaScreen.fromRoute(
+        val currentScreen = BottomNavigationIcon.fromRoute(
             backstackEntry.value?.destination?.route
         )
 
@@ -62,19 +61,19 @@ fun JetRakumaApp(){
         }) {
             NavHost(
                 navController = navController,
-                startDestination = JetRakumaScreen.Home.name
+                startDestination = BottomNavigationIcon.Home.name
                 //   modifier = Modifier.padding(innerPadding)
             ) {
-                composable(JetRakumaScreen.Home.name) {
+                composable(BottomNavigationIcon.Home.name) {
                     HomeBody()
                 }
-                composable(JetRakumaScreen.Search.name) {
+                composable(BottomNavigationIcon.Search.name) {
                     SearchScreen()
                 }
-                composable(JetRakumaScreen.Add.name) {
+                composable(BottomNavigationIcon.Add.name) {
                     NotificationScreen()
                 }
-                composable(JetRakumaScreen.MyPage.name) {
+                composable(BottomNavigationIcon.MyPage.name) {
                     MyPageScreen()
                 }
             }

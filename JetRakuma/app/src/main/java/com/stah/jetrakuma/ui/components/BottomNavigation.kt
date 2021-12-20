@@ -8,12 +8,12 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import com.stah.jetrakuma.JetRakumaScreen
+import com.stah.jetrakuma.ui.nav.BottomNavigationIcon
 
 @Composable
-fun JetRakumaBottomNavigation (onTabSelected: (JetRakumaScreen) -> Unit,
-                               allScreen: List<JetRakumaScreen>,
-                               currentScreen: JetRakumaScreen
+fun JetRakumaBottomNavigation (onTabSelected: (BottomNavigationIcon) -> Unit,
+                               allScreen: List<BottomNavigationIcon>,
+                               currentScreen: BottomNavigationIcon
                                ) {
     BottomNavigation {
         allScreen.forEach { screen->

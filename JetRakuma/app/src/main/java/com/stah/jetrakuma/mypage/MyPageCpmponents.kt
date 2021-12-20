@@ -65,6 +65,12 @@ fun TopBar(
     }
 }
 
+@Composable
+fun MyCash(){
+
+}
+
+
 @ExperimentalFoundationApi
 @Composable
 fun MyPageItems(modifier: Modifier) {
@@ -75,6 +81,7 @@ fun MyPageItems(modifier: Modifier) {
         modifier = modifier,
 
         // content padding
+
         contentPadding = PaddingValues(
             start = 12.dp,
             top = 16.dp,
@@ -86,7 +93,7 @@ fun MyPageItems(modifier: Modifier) {
                 Card(
                     backgroundColor = Color.White,
                     modifier = Modifier
-                        .padding(4.dp)
+                        .padding(24.dp)
                         .fillMaxHeight()
                         .fillMaxWidth(),
                     elevation = 8.dp,

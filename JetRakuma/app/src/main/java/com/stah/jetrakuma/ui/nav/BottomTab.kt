@@ -1,10 +1,10 @@
-package com.stah.jetrakuma
+package com.stah.jetrakuma.ui.nav
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.ui.graphics.vector.ImageVector
 
-enum class JetRakumaScreen(
+enum class BottomNavigationIcon(
     val icon: ImageVector
 ) {
     Home(
@@ -21,7 +21,7 @@ enum class JetRakumaScreen(
     );
 
     companion object {
-        fun fromRoute(route: String?): JetRakumaScreen =
+        fun fromRoute(route: String?): BottomNavigationIcon =
             when (route?.substringBefore("/")) {
                 Home.name -> Home
                 Search.name -> Search
