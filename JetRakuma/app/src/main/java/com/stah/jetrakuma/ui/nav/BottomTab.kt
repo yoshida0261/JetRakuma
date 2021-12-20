@@ -4,7 +4,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.ui.graphics.vector.ImageVector
 
-enum class BottomNavigationIcon(
+enum class BottomTab(
     val icon: ImageVector
 ) {
     Home(
@@ -21,7 +21,7 @@ enum class BottomNavigationIcon(
     );
 
     companion object {
-        fun fromRoute(route: String?): BottomNavigationIcon =
+        fun fromRoute(route: String?): BottomTab =
             when (route?.substringBefore("/")) {
                 Home.name -> Home
                 Search.name -> Search

@@ -5,16 +5,16 @@ import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
-import com.stah.jetrakuma.ui.nav.BottomNavigationIcon
+import com.stah.jetrakuma.ui.nav.BottomTab
 import com.stah.jetrakuma.ui.components.JetRakumaBottomNavigation
 import com.stah.jetrakuma.ui.components.TopBarInput
 
 @ExperimentalComposeUiApi
 @Composable
 fun HomeScreen(
-    allScreens: List<BottomNavigationIcon>,
-    onTabSelected: (BottomNavigationIcon) -> Unit,
-    currentScreen: BottomNavigationIcon
+    allScreens: List<BottomTab>,
+    onTabSelected: (BottomTab) -> Unit,
+    currentScreen: BottomTab
 ) {
         //Column {
             //    HomeSearchInput()

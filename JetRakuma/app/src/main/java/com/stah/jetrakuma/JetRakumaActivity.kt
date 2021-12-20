@@ -14,7 +14,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.google.accompanist.pager.ExperimentalPagerApi
-import com.stah.jetrakuma.ui.nav.BottomNavigationIcon
+import com.stah.jetrakuma.ui.nav.BottomTab
 import com.stah.jetrakuma.home.HomeBody
 import com.stah.jetrakuma.home.HomeScreen
 import com.stah.jetrakuma.mypage.MyPageScreen
@@ -43,10 +43,10 @@ class JetRakumaActivity : ComponentActivity() {
 @Composable
 fun JetRakumaApp(){
     JetRakumaTheme {
-        val allScreens = BottomNavigationIcon.values().toList()
+        val allScreens = BottomTab.values().toList()
         val navController = rememberNavController()
         val backstackEntry = navController.currentBackStackEntryAsState()
-        val currentScreen = BottomNavigationIcon.fromRoute(
+        val currentScreen = BottomTab.fromRoute(
             backstackEntry.value?.destination?.route
         )
 
@@ -61,19 +61,19 @@ fun JetRakumaApp(){
         }) {
             NavHost(
                 navController = navController,
-                startDestination = BottomNavigationIcon.Home.name
+                startDestination = BottomTab.Home.name
                 //   modifier = Modifier.padding(innerPadding)
             ) {
-                composable(BottomNavigationIcon.Home.name) {
+                composable(BottomTab.Home.name) {
                     HomeBody()
                 }
-                composable(BottomNavigationIcon.Search.name) {
+                composable(BottomTab.Search.name) {
                     SearchScreen()
                 }
-                composable(BottomNavigationIcon.Add.name) {
+                composable(BottomTab.Add.name) {
                     NotificationScreen()
                 }
-                composable(BottomNavigationIcon.MyPage.name) {
+                composable(BottomTab.MyPage.name) {
                     MyPageScreen()
                 }
             }
