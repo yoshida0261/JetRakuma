@@ -33,7 +33,6 @@ fun HomeScreen(
 fun HomeBody(){
     Scaffold( topBar = {TopBarInput()}) {
         Column {
-            //HomeSearchInput()
             PhotoGrid(modifier = Modifier.weight(1f))
         }
     }

@@ -38,7 +38,11 @@ fun SearchInputText(
     onImeAction: () -> Unit = {}
 ){
     val keyboardController = LocalSoftwareKeyboardController.current
-    TextField(
+    OutlinedTextField(
+        leadingIcon= {Icon(
+            Item.Search.icon, contentDescription = null,
+            //    modifier = Modifier.background(Color.Gray)
+        )},
         value = text,
         label = { Text("キーワードで検索")},
         onValueChange = onTextChange,

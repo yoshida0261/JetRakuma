@@ -32,6 +32,7 @@ fun TopBar() {
 @Composable
 fun TopBarInput() {
     Row() {
+        /*
         Box(
             Modifier
                 .align(Alignment.CenterVertically)
@@ -42,6 +43,8 @@ fun TopBarInput() {
                 //    modifier = Modifier.background(Color.Gray)
             )
         }
+
+         */
         SearchInputText(
             text = "",
             onTextChange = {},
