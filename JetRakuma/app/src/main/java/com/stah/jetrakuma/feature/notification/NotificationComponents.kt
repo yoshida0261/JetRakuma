@@ -1,4 +1,4 @@
-package com.stah.jetrakuma.notification
+package com.stah.jetrakuma.feature.notification
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column

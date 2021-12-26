@@ -17,9 +17,9 @@ import com.google.accompanist.pager.ExperimentalPagerApi
 import com.stah.jetrakuma.ui.nav.BottomTab
 import com.stah.jetrakuma.home.HomeBody
 import com.stah.jetrakuma.home.HomeScreen
-import com.stah.jetrakuma.mypage.MyPageScreen
-import com.stah.jetrakuma.notification.NotificationScreen
-import com.stah.jetrakuma.search.SearchScreen
+import com.stah.jetrakuma.feature.mypage.MyPageScreen
+import com.stah.jetrakuma.feature.notification.NotificationScreen
+import com.stah.jetrakuma.feature.search.SearchScreen
 import com.stah.jetrakuma.ui.theme.JetRakumaTheme
 
 class JetRakumaActivity : ComponentActivity() {

@@ -1,4 +1,4 @@
-package com.stah.jetrakuma.additem
+package com.stah.jetrakuma.feature.additem
 
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable

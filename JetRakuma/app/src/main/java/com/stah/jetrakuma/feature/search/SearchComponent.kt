@@ -1,4 +1,4 @@
-package com.stah.jetrakuma.search
+package com.stah.jetrakuma.feature.search
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image

@@ -1,4 +1,4 @@
-package com.stah.jetrakuma.mypage
+package com.stah.jetrakuma.feature.mypage
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Column
