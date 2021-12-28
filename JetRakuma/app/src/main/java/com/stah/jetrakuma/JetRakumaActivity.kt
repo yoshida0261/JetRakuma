@@ -15,8 +15,8 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.stah.jetrakuma.ui.nav.BottomTab
-import com.stah.jetrakuma.home.HomeBody
-import com.stah.jetrakuma.home.HomeScreen
+import com.stah.jetrakuma.feature.home.HomeBody
+import com.stah.jetrakuma.feature.home.HomeScreen
 import com.stah.jetrakuma.feature.mypage.MyPageScreen
 import com.stah.jetrakuma.feature.notification.NotificationScreen
 import com.stah.jetrakuma.feature.search.SearchScreen

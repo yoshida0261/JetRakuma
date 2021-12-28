@@ -1,4 +1,4 @@
-package com.stah.jetrakuma.home
+package com.stah.jetrakuma.feature.home
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.Scaffold

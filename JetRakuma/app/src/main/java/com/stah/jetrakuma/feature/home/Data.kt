@@ -1,4 +1,4 @@
-package com.stah.jetrakuma.home
+package com.stah.jetrakuma.feature.home
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
